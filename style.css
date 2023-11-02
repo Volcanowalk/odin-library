@@ -1,0 +1,59 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+body {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+
+
+/* Header CSS */
+.header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    box-shadow: 3px 5px 7px grey;
+}
+
+.header-title {
+    font-weight: 900;
+    font-size: 3rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main CSS */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-row: 2 / 3;
+}
+
+.table-container {
+    grid-column: 2 / 3;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+/* Table CSS */
+
+table {
+    table-layout: auto;
+    width: 100%;
+}
+
+table, th {
+    border: 1px solid black;
+}
+
+.btnDelete {
+    background-color: red;
+}

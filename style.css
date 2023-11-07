@@ -49,11 +49,3 @@ table {
     table-layout: auto;
     width: 100%;
 }
-
-table, th {
-    border: 1px solid black;
-}
-
-.btnDelete {
-    background-color: red;
-}

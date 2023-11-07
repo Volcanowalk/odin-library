@@ -45,26 +45,31 @@ function displayBook() {
         cellPages.innerHTML = `${book.pages}`
 
         let toggleRead = document.createElement('button')
+        toggleRead.classList.add('btn')
+        toggleRead.style.color = 'white'
         if(book.read) {
             toggleRead.innerText = 'Read'
+            toggleRead.style.backgroundColor = 'green'
         } else {
             toggleRead.innerText = 'Not read'
+            toggleRead.style.backgroundColor = 'orange'
         }
-        toggleRead.setAttribute('class', 'toggleRead')
         toggleRead.addEventListener('click', function(event) {
             if(event.target.innerText === 'Read') {
                 event.target.innerText = 'Not read'
                 book.changeRead()
+                toggleRead.style.backgroundColor = 'orange'
             } else {
                 event.target.innerText = 'Read'
                 book.changeRead()
+                toggleRead.style.backgroundColor = 'green'
             }
         })
         cellRead.append(toggleRead)
 
         let btnDelete = document.createElement('button')
         btnDelete.innerText = "DELETE"
-        btnDelete.setAttribute('class', 'btnDelete')
+        btnDelete.classList.add('btn', 'btn-danger')
         btnDelete.setAttribute('data-array-index', `${index}`)
         btnDelete.addEventListener('click', function() {
             deleteBook(btnDelete.dataset.arrayIndex)

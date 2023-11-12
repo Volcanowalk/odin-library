@@ -31,18 +31,22 @@
     </div>
 
     <dialog>
-        <form action="#">
+        <form action="#" class="form-book">
             <label for="title">Title</label>
-            <input type="text" id="title">
+            <input type="text" id="title" required>
             <label for="author">Author</label>
-            <input type="text" id="author">
+            <input type="text" id="author" required>
             <label for="pages">Pages</label>
-            <input type="number" id="pages">
-            <label for="read">READ?</label>
-            <input type="checkbox" id="read">
-            <button type="submit" class="btnSubmit">Submit</button>
+            <input type="number" id="pages" required>
+            <div class="read-checkbox">
+                <label for="read">READ?</label>
+                <input type="checkbox" id="read">
+            </div>
+            <div class="form-buttons">
+                <input type="submit" value="Submit" class="btnSubmit">
+                <button class="btnClose">Close</button>
+            </div>
         </form>
-        <button class="btnClose">Close</button>
     </dialog>
 
 </body>

@@ -43,6 +43,17 @@ body {
     margin-top: 10px;
 }
 
+.form-book {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.form-buttons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 /* Table CSS */
 
 table {

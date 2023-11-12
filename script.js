@@ -106,23 +106,25 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     btnSubmit.addEventListener('click', () => {
-        let title = document.querySelector('#title').value
-        let author = document.querySelector('#author').value
-        let pages = document.querySelector('#pages').value
-        let read = document.querySelector('#read').checked
+        let title = document.querySelector('#title')
+        let author = document.querySelector('#author')
+        let pages = document.querySelector('#pages')
+        let read = document.querySelector('#read')
 
-        addBook(title, author, pages, read)
+        if(title.validity.valid && author.validity.valid && pages.validity.valid) {
+            addBook(title.value, author.value, pages.value, read.checked)
 
-        //Clear the table
-        clearDisplay()
-        //Re-populate the table
-        displayBook()
+            //Clear the table
+            clearDisplay()
+            //Re-populate the table
+            displayBook()
 
-        //Clear the input fields
-        document.querySelector('#title').value = ''
-        document.querySelector('#author').value = ''
-        document.querySelector('#pages').value = ''
-        document.querySelector('#read').checked = false
+            //Clear the input fields
+            title.value = ''
+            author.value = ''
+            pages.value = ''
+            read.checked = false
+        }
     })
 
 })
